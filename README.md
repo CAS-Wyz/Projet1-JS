@@ -1,4 +1,5 @@
 Ma To-Do List 📝
+
 Cette application est une to-do list interactive développée avec React et TypeScript. Elle permet de créer, modifier, filtrer et gérer facilement ses tâches, avec une sauvegarde locale sur le navigateur.
 
 Fonctionnalités :
