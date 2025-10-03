@@ -1,75 +1,59 @@
-# React + TypeScript + Vite
+Ma To-Do List 📝
+Cette application est une to-do list interactive développée avec React et TypeScript. Elle permet de créer, modifier, filtrer et gérer facilement ses tâches, avec une sauvegarde locale sur le navigateur.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fonctionnalités
+Ajout de tâches avec titre et description optionnelle.
 
-Currently, two official plugins are available:
+Modification des tâches existantes via un mode édition intégré.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Suppression de tâches avec confirmation avant action.
 
-## React Compiler
+Changement de statut (« fait » ou « à faire ») par case à cocher.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Filtrage des tâches : toutes, faites, à faire.
 
-Note: This will impact Vite dev & build performances.
+Statistiques dynamiques (nombre de tâches totales, faites, restantes).
 
-## Expanding the ESLint configuration
+Persistance locale grâce au stockage via localStorage (restauration après rechargement).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Installation
+Clone le projet :
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+git clone <URL_DU_REPO>
+cd <nom_du_dossier>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Installe les dépendances :
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
+Lance l'application en développement :
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm start
+Accède à l’application via http://localhost:3000
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Structure des fichiers
+App.tsx : contient toute la logique de la to-do list.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+App.css : styles de l'interface utilisateur.
+
+Utilisation
+Saisis le titre d'une tâche et, si tu le souhaites, une description.
+
+Clique sur « Ajouter » pour ajouter une tâche à la liste.
+
+Utilise les cases à cocher pour marquer une tâche comme faite ou non.
+
+Clique sur « Modifier » pour éditer une tâche, puis sur « Enregistrer » ou « Annuler ».
+
+Clique sur « Supprimer » puis confirme l’action pour effacer une tâche.
+
+Filtre la liste pour afficher toutes les tâches, seulement celles terminées ou celles à faire.
+
+Dépendances principales
+react
+
+typescript
+
+Personnalisation
+Styles : modifie App.css pour adapter l’apparence à tes besoins.
+
+Logiciel : améliore les fonctions (ex. : ajout de catégories, deadlines, etc.) selon tes exigences métiers.
