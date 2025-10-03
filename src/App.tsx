@@ -22,7 +22,6 @@ function App() {
 
   const [filter, setFilter] = useState<"all" | "done" | "todo">("all");
 
-  // ⚡️ Nouveau state pour la confirmation
   const [taskToDelete, setTaskToDelete] = useState<number | null>(null);
 
   useEffect(() => {
@@ -42,7 +41,6 @@ function App() {
     }
   };
 
-  // ⚡️ Nouvelle logique : ouverture du pop-up au lieu de supprimer directement
   const confirmDeleteTask = (index: number) => {
     setTaskToDelete(index);
   };
@@ -218,7 +216,6 @@ function App() {
         ))}
       </ul>
 
-      {/* ⚡️ Pop-up de confirmation */}
       {taskToDelete !== null && (
         <div className="popup-overlay">
           <div className="popup">
