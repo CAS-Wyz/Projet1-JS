@@ -26,7 +26,7 @@ npm install
 
 npm start
 
-4. Accède à l’application via http://localhost:3000
+4. Accède à l’application via http://localhost:5173
 
 Structure des fichiers :
 
